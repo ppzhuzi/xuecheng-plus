@@ -6,5 +6,9 @@ import java.util.List;
 
 public interface CourseTeacherService {
 
-     public List<CourseTeacher> selectCourseTeacher(Long courseId);
+    List<CourseTeacher> selectCourseTeacher(Long courseId);
+
+    CourseTeacher insertAndUpdateCourseTeacher(CourseTeacher courseTeacher);
+
+    void deleteCourseTeacher(Long courseId, Long teacherId);
 }
