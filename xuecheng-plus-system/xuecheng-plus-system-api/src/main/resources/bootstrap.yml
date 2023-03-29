@@ -6,6 +6,12 @@ server:
 spring:
   application:
     name: system-service
+  cloud:
+    nacos:
+      server-addr: 47.113.180.97:8848
+      discovery: #服务注册相关配置
+        namespace: dev402
+        group: xuecheng-plus-project
 
 # 日志文件配置路径
 logging:
