@@ -21,6 +21,9 @@ import java.util.List;
  */
 public interface MediaFileService {
 
+ //根据媒资id查询文件信息
+ MediaFiles getFileById(String mediaId);
+
  /**
   * @description 媒资文件查询方法
   * @param pageParams 分页参数
@@ -36,9 +39,10 @@ public interface MediaFileService {
   * @param companyId 机构id
   * @param uploadFileParamsDto 文件信息
   * @param localFilePath 文件本地路径
+  * @param objectname 如果传入objectname要按objectname的目录去存储，如果不传就按年月日目录结构去存储
   * @return UploadFileResultDto
   */
- public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath);
+ public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath,String objectname);
 
  public MediaFiles addMediaFilesToDb(Long companyId,String fileMd5,UploadFileParamsDto uploadFileParamsDto,String bucket,String objectName);
 
